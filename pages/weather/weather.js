@@ -15,11 +15,14 @@ Page({
     },
 
     onLoad: function () {
+
+    },
+
+    onShow:function () {
         let that = this;
         getWeather()
             .then(result => that.setData({weather: result}))
             .catch(err => console.error(err));
-
     }
 
 
