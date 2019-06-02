@@ -1,0 +1,56 @@
+<image class="w-img-bg" src="{{attractions[0]}}" mode="aspectFill"></image>
+<view class="w-text-bg flex flex-direction align-center padding">
+    <text class="cuIcon-locationfill text-white text-xs">青岛 平度</text>
+    <text class="text-white text-sl">{{weather.degree}}°</text>
+    <text class="text-white text-xl ">{{weather.weather}}</text>
+    <text class="text-white text-xs ">湿度 {{weather.humidity}}%</text>
+    <text class="text-white text-xs ">{{winds[weather.wind_direction] + " " +
+        weather.wind_power}}级
+    </text>
+</view>
+<view class="padding">
+    <text class="text-white text-xs">
+        平度位于胶东半岛西部，是连接青岛、潍坊、烟台三大城市的“枢纽”，被誉为“青岛后花园”，因此这个三个城市的天气对平度的天气极具参考价值。
+    </text>
+</view>
+
+<view class="flex-direction bg-white padding-lg">
+    <text>今天</text>
+    <block wx:for="{{weather.today}}" wx:key>
+        <view class="flex">
+            <text class="flex-sub">{{item.city}}</text>
+            <text class="flex-sub">{{item.max_degree}}/{{item.min_degree}}°</text>
+            <image src="../../images/weather/{{item.day_weather_code}}.svg"
+                   class="w-icon flex-sub"></image>
+            <text class="flex-twice">{{item.day_weather == item.night_weather ? item.day_weather :
+                item.day_weather+"转"+item.night_weather }}
+            </text>
+            <text class="flex-sub">{{item.day_wind_direction}}</text>
+            <text class="flex-sub">{{item.day_wind_power}}级</text>
+        </view>
+    </block>
+
+</view>
+
+<view class="flex-direction bg-white padding-lg margin-top">
+    <text>明天</text>
+    <block wx:for="{{weather.tomorrow}}" wx:key>
+        <view class="flex">
+            <text class="flex-sub">{{item.city}}</text>
+            <text class="flex-sub">{{item.max_degree}}/{{item.min_degree}}°</text>
+            <image src="../../images/weather/{{item.day_weather_code}}.svg"
+                   class="w-icon flex-sub"></image>
+            <text class="flex-twice">{{item.day_weather == item.night_weather ? item.day_weather :
+                item.day_weather+"转"+item.night_weather }}
+            </text>
+            <text class="flex-sub">{{item.day_wind_direction}}</text>
+            <text class="flex-sub">{{item.day_wind_power}}级</text>
+        </view>
+    </block>
+</view>
+
+
+<!--<view class="padding-lg  bg-white margin-top">-->
+    <!--<text>今日太空美图</text>-->
+<!--</view>-->
+<!--<image class="" src="{{attractions[0]}}" mode="aspectFill"></image>-->

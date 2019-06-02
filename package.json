@@ -1,0 +1,24 @@
+{
+  "name": "xpdtools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "axios-miniprogram-adapter": "^0.2.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/li-jun-bo/XPDTools.git"
+  },
+  "author": "William",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/li-jun-bo/XPDTools/issues"
+  },
+  "homepage": "https://github.com/li-jun-bo/XPDTools#readme"
+}
