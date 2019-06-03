@@ -53,6 +53,6 @@
 <view class="margin-top padding-lg  bg-white">
     <text>今日美图</text>
     <view class="padding-top" bindtap="previewImage">
-        <image class="solid shadow padding bg-white" src="{{weather.image.url}}" mode="widthFix"></image>
+        <image class="w-bing-image-bg solid shadow padding bg-white" src="{{weather.image.url}}" mode="widthFix"></image>
     </view>
 </view>
