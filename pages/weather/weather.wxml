@@ -50,7 +50,9 @@
 </view>
 
 
-<!--<view class="padding-lg  bg-white margin-top">-->
-    <!--<text>今日太空美图</text>-->
-<!--</view>-->
-<!--<image class="" src="{{attractions[0]}}" mode="aspectFill"></image>-->
+<view class="margin-top padding-lg  bg-white">
+    <text>今日美图</text>
+    <view class="padding-top" bindtap="previewImage">
+        <image class="solid shadow padding bg-white" src="{{weather.image.url}}" mode="widthFix"></image>
+    </view>
+</view>

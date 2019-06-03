@@ -14,16 +14,30 @@ Page({
         attractions: ["http://xiaopingdu.vip/images/hero_bg.jpg"]
     },
 
+
     onLoad: function () {
 
     },
 
-    onShow:function () {
+
+    onShow: function () {
         let that = this;
         getWeather()
-            .then(result => that.setData({weather: result}))
-            .catch(err => console.error(err));
-    }
+            .then(result => {
+                console.log(result);
+                that.setData({weather: result});
+            })
+            .catch(err => {
+                console.error(err);
+            });
+    },
+
+
+    previewImage: function (e) {
+        wx.previewImage({
+            urls: [this.data.weather.image.url]
+        });
+    },
 
 
 });
